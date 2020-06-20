@@ -8,13 +8,17 @@ import Home from './panels/Home';
 import Client from './panels/Client';
 import ClientForm from './panels/ClientForm';
 import Master from './panels/Master';
+import MasterProfile from './panels/MasterProfile';
 import Offers from './panels/Offers';
+import Market from './panels/Market';
+import MarketChose from './panels/MarketChose';
 import YouLikeStar from './panels/YouLikeStar';
 import Persik from './panels/Persik';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
 	const [fetchedUser, setUser] = useState(null);
+	const [fetchedProfile, setProfile] = useState(null);
 	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
 
 	useEffect(() => {
@@ -31,6 +35,8 @@ const App = () => {
 			setPopout(null);
 		}
 		fetchData();
+
+
 	}, []);
 
 	const go = e => {
@@ -45,6 +51,9 @@ const App = () => {
 			<Offers id='offers' fetchedUser={fetchedUser} go={go} />
 			<YouLikeStar id='youlikestar' fetchedUser={fetchedUser} go={go} />
 			<Master id='master' fetchedUser={fetchedUser} go={go} />
+			<MasterProfile id='masterprofile' fetchedUser={fetchedUser} fetchedProfile={fetchedProfile} go={go} />
+			<Market id='market' fetchedUser={fetchedUser} go={go} />
+			<MarketChose id='marketchose' fetchedUser={fetchedUser} go={go} />
 			<Persik id='persik' go={go} />
 		</View>
 	);

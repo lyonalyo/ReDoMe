@@ -30,20 +30,22 @@ const ClientForm = ({ id, go, fetchedUser }) => (
 
 		<Group>
 			<FormLayout>
-					<File top="Загрузите ваше фото" before={<Icon24Camera />} size="xl">
-						Открыть галерею
-					</File>
 
-					<File top="Загрузите желаемое фото" before={<Icon24Camera />} size="xl">
-						Открыть галерею
-					</File>
+				<File top="Загрузите ваше фото" before={<Icon24Camera />} size="xl">
+					Открыть галерею
+				</File>
+
+				<File top="Загрузите желаемое фото" before={<Icon24Camera />} size="xl">
+					Открыть галерею
+				</File>
+
 
 				<Div>
-					<Button size="xl" level="2" onClick={go} data-to="persik">
+					<Button size="xl" level="2" onClick={go} data-to="youlikestar">
 						Найти похожую звезду
 					</Button>
 				</Div>
-					<Textarea top="Ваш комментарий" placeholder="Хочу стрижку! Хочу макияж! Хочу укладку!" />
+				<Textarea top="Ваш комментарий" placeholder="Хочу стрижку! Хочу макияж! Хочу укладку!" />
 
 				<Div>
 					<Button size="xl" level="2" onClick={go} data-to="persik">

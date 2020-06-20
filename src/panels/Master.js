@@ -7,13 +7,17 @@ import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
-import {IOS, platform} from "@vkontakte/vkui";
+import {Header, IOS, platform, Separator} from "@vkontakte/vkui";
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
 
-const osName = platform();
+import logo from "../img/logo.png";
+import './logoheader.css';
+import bridge from "@vkontakte/vk-bridge";
+import MasterProfile from "./MasterProfile";
 
+const osName = platform();
 
 const Master = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
@@ -21,26 +25,23 @@ const Master = ({ id, go, fetchedUser }) => (
 			left={<PanelHeaderButton onClick={go} data-to="home">
 				{osName === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
 			</PanelHeaderButton>}
-		>Тест2</PanelHeader>
-		{fetchedUser &&
-		<Group title="User Data Fetched with VK Bridge">
-			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-			>
-				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-			</Cell>
-		</Group>}
+		><img className="LogoHeader" src={logo} alt="RE-DO-ME"/></PanelHeader>
 
-		<Group title="Navigation Example">
+		<Group>
 			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik">
-					Привет Мастер!
+				<Button size="xl" level="2" onClick={go} data-to="masterprofile">
+					Мой профиль
+				</Button>
+			</Div>
+			<Div>
+				<Button size="xl" level="2" onClick={go} data-to="market">
+					Запросы клиентов
 				</Button>
 			</Div>
 		</Group>
 	</Panel>
 );
+
 
 Master.propTypes = {
 	id: PropTypes.string.isRequired,

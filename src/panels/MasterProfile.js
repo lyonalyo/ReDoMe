@@ -5,19 +5,21 @@ import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader
 import Button from '@vkontakte/vkui/dist/components/Button/Button';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
 import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
-import Div from '@vkontakte/vkui/dist/components/Div/Div';
+import {CellButton, Header, SimpleCell, Link, InfoRow, CardGrid, Card} from '@vkontakte/vkui';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import {IOS, platform} from "@vkontakte/vkui";
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
+import Icon24Add from '@vkontakte/icons/dist/24/add';
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
 
 import logo from "../img/logo.png";
 import './logoheader.css';
+import bridge from "@vkontakte/vk-bridge";
 
 const osName = platform();
 
-const Master = ({ id, go, fetchedUser }) => (
+const MasterProfile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader
 			left={<PanelHeaderButton onClick={go} data-to="home">
@@ -33,18 +35,74 @@ const Master = ({ id, go, fetchedUser }) => (
 				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
 			</Cell>
 		</Group>}
-
 		<Group>
-			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik">
-					Привет Мастер!
-				</Button>
-			</Div>
+			<Header aside={<Link>Редактировать</Link>}>
+				Информация
+			</Header>
+			<SimpleCell multiline>
+				<InfoRow header="Специализация">
+					парикмахер-стилист
+				</InfoRow>
+			</SimpleCell>
+			<SimpleCell>
+				<InfoRow header="Место работы">
+					Салон InStyle, ул. Московская, д.52
+				</InfoRow>
+			</SimpleCell>
+			<SimpleCell>
+				<InfoRow header="Контактный телефон">
+					+7(906)578-87-96
+				</InfoRow>
+			</SimpleCell>
+			<SimpleCell>
+				<InfoRow header="Сертификаты">
+					Курсы по мажимеш
+				</InfoRow>
+			</SimpleCell>
 		</Group>
+
+		<Group separator="hide" header={<Header mode="secondary">Портфолио</Header>}>
+			<CardGrid>
+				<Card size="s">
+					<div style={{ height: 96 }} />
+				</Card>
+				<Card size="s">
+					<div style={{ height: 96 }} />
+				</Card>
+				<Card size="s">
+					<div style={{ height: 96 }} />
+				</Card>
+			</CardGrid>
+			<CellButton before={<Icon24Add />}>Добавить работу</CellButton>
+		</Group>
+
 	</Panel>
 );
 
-Master.propTypes = {
+
+async function getProfile() {
+	fetch("http://81.177.102.160:43210/ReDoMeApi/GetBarber?barber=id192510266")
+		.then(res => res.json())
+		.then(
+			(result) => {
+				this.setState({
+					isLoaded: true,
+					items: result.items
+				});
+			},
+			// Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
+			// чтобы не перехватывать исключения из ошибок в самих компонентах.
+			(error) => {
+				this.setState({
+					isLoaded: true,
+					error
+				});
+			}
+		)
+}
+getProfile();
+
+MasterProfile.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -57,4 +115,4 @@ Master.propTypes = {
 	}),
 };
 
-export default Master;
+export default MasterProfile;
