@@ -5,6 +5,11 @@ import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenS
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
+import Client from './panels/Client';
+import ClientForm from './panels/ClientForm';
+import Master from './panels/Master';
+import Offers from './panels/Offers';
+import YouLikeStar from './panels/YouLikeStar';
 import Persik from './panels/Persik';
 
 const App = () => {
@@ -35,6 +40,11 @@ const App = () => {
 	return (
 		<View activePanel={activePanel} popout={popout}>
 			<Home id='home' fetchedUser={fetchedUser} go={go} />
+			<Client id='client' fetchedUser={fetchedUser} go={go} />
+			<ClientForm id='clientform' fetchedUser={fetchedUser} go={go} />
+			<Offers id='offers' fetchedUser={fetchedUser} go={go} />
+			<YouLikeStar id='youlikestar' fetchedUser={fetchedUser} go={go} />
+			<Master id='master' fetchedUser={fetchedUser} go={go} />
 			<Persik id='persik' go={go} />
 		</View>
 	);
