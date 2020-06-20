@@ -15,9 +15,11 @@ import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton
 
 import logo from "../img/logo.png";
 import './logoheader.css';
-import bridge from "@vkontakte/vk-bridge";
+
+
 
 const osName = platform();
+
 
 const MasterProfile = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
@@ -56,7 +58,7 @@ const MasterProfile = ({ id, go, fetchedUser }) => (
 			</SimpleCell>
 			<SimpleCell>
 				<InfoRow header="Сертификаты">
-					Курсы по мажимеш
+					123
 				</InfoRow>
 			</SimpleCell>
 		</Group>
@@ -80,27 +82,6 @@ const MasterProfile = ({ id, go, fetchedUser }) => (
 );
 
 
-async function getProfile() {
-	fetch("http://81.177.102.160:43210/ReDoMeApi/GetBarber?barber=id192510266")
-		.then(res => res.json())
-		.then(
-			(result) => {
-				this.setState({
-					isLoaded: true,
-					items: result.items
-				});
-			},
-			// Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
-			// чтобы не перехватывать исключения из ошибок в самих компонентах.
-			(error) => {
-				this.setState({
-					isLoaded: true,
-					error
-				});
-			}
-		)
-}
-getProfile();
 
 MasterProfile.propTypes = {
 	id: PropTypes.string.isRequired,
@@ -112,7 +93,7 @@ MasterProfile.propTypes = {
 		city: PropTypes.shape({
 			title: PropTypes.string,
 		}),
-	}),
+	})
 };
 
 export default MasterProfile;
