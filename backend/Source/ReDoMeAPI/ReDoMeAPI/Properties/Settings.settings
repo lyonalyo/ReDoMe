@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ReDoMeAPI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=81.177.102.160,27468;Persist Security Info=True;Password=Q123werty!;User ID=redome_user;Initial Catalog=Barber2</Value>
+    </Setting>
+    <Setting Name="WebServicePort" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">43210</Value>
+    </Setting>
+    <Setting Name="Mode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

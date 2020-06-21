@@ -1,0 +1,10 @@
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\bin\Debug\ReDoMeAPI.exe.config
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\bin\Debug\ReDoMeAPI.exe
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\bin\Debug\ReDoMeAPI.pdb
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\bin\Debug\Nancy.dll
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\bin\Debug\Nancy.Hosting.Self.dll
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\obj\Debug\ReDoMeAPI.Properties.Resources.resources
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\obj\Debug\ReDoMeAPI.csproj.GenerateResource.Cache
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\obj\Debug\ReDoMeAPI.exe
+D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\obj\Debug\ReDoMeAPI.pdb

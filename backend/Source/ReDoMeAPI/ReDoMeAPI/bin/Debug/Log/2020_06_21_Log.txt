@@ -1,0 +1,71 @@
+21.06.2020 00:44:43	SuccessAudit	MainController: called ReDoMeApi/getStarByFace
+21.06.2020 00:44:44	Error	MainController: Error getStarByFace: Ссылка на объект не указывает на экземпляр объекта.
+21.06.2020 00:44:44	SuccessAudit	MainController: ended ReDoMeApi/getStarByFace
+21.06.2020 00:45:06	SuccessAudit	MainController: called ReDoMeApi/getStarByFace
+21.06.2020 00:46:50	SuccessAudit	MainController: ended ReDoMeApi/getStarByFace
+21.06.2020 00:48:27	SuccessAudit	MainController: called ReDoMeApi/GetAllSalons
+21.06.2020 00:48:27	SuccessAudit	MainController: ended ReDoMeApi/GetAllSalons
+21.06.2020 00:48:56	SuccessAudit	MainController: called ReDoMeApi/GetAllBarbers
+21.06.2020 00:48:56	Error	Database: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+Exception stack trace:
+    в System.Data.SqlClient.SqlBuffer.get_Int32()
+   в ReDoMeAPI.Database.getBarbers()
+21.06.2020 00:48:56	SuccessAudit	MainController: ended ReDoMeApi/GetAllBarbers
+21.06.2020 00:52:52	SuccessAudit	MainController: called ReDoMeApi/GetAllBarbers
+21.06.2020 00:55:47	Error	Database: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+Exception stack trace:
+    в System.Data.SqlClient.SqlBuffer.get_Int32()
+   в ReDoMeAPI.Database.getBarbers()
+21.06.2020 00:55:47	SuccessAudit	MainController: ended ReDoMeApi/GetAllBarbers
+21.06.2020 00:55:53	SuccessAudit	MainController: called ReDoMeApi/GetAllBarbers
+21.06.2020 00:55:59	Error	Database: Неопределенные данные. Этот метод или свойство не может вызываться для значений равных Null.
+Exception stack trace:
+    в System.Data.SqlClient.SqlBuffer.get_Int32()
+   в ReDoMeAPI.Database.getBarbers()
+21.06.2020 00:55:59	SuccessAudit	MainController: ended ReDoMeApi/GetAllBarbers
+21.06.2020 00:56:08	SuccessAudit	MainController: called ReDoMeApi/GetAllBarbers
+21.06.2020 00:56:32	Error	Database: Недопустимая попытка чтения при отсутствии данных.
+Exception stack trace:
+    в System.Data.SqlClient.SqlDataReader.CheckDataIsReady(Int32 columnIndex, Boolean allowPartiallyReadColumn, Boolean permitAsync, String methodName)
+   в System.Data.SqlClient.SqlDataReader.TryReadColumn(Int32 i, Boolean setTimeout, Boolean allowPartiallyReadColumn)
+   в System.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   в ReDoMeAPI.Database.getBarbers()
+21.06.2020 00:56:32	SuccessAudit	MainController: ended ReDoMeApi/GetAllBarbers
+21.06.2020 00:56:37	SuccessAudit	MainController: called ReDoMeApi/GetAllBarbers
+21.06.2020 00:58:14	SuccessAudit	MainController: called ReDoMeApi/GetAllBarbers
+21.06.2020 00:58:14	SuccessAudit	MainController: ended ReDoMeApi/GetAllBarbers
+21.06.2020 00:58:30	SuccessAudit	MainController: called ReDoMeApi/GetAllBarbers
+21.06.2020 00:58:30	SuccessAudit	MainController: ended ReDoMeApi/GetAllBarbers
+21.06.2020 01:30:18	SuccessAudit	MainController: called ReDoMeApi/GetAllSalons
+21.06.2020 01:30:18	Error	Database: Пользователю "redome_user" не удалось войти в систему. Причина: необходимо сменить пароль учетной записи.
+Exception stack trace:
+    в System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   в System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   в System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   в System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   в System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   в System.Data.SqlClient.SqlConnection.Open()
+   в ReDoMeAPI.Database.getSalons() в D:\Projects\Hakaton\ReDoMeAPI\Source\ReDoMeAPI\ReDoMeAPI\Source\Database\Database.cs:строка 20
+21.06.2020 01:30:19	SuccessAudit	MainController: ended ReDoMeApi/GetAllSalons
+21.06.2020 01:30:46	SuccessAudit	MainController: called ReDoMeApi/GetAllSalons
+21.06.2020 01:33:24	SuccessAudit	MainController: called ReDoMeApi/GetAllSalons
+21.06.2020 01:33:27	SuccessAudit	MainController: ended ReDoMeApi/GetAllSalons
+21.06.2020 07:26:59	SuccessAudit	RequestController: called ReDoMeApi/Request/GetAll
+21.06.2020 07:26:59	SuccessAudit	RequestController: ended ReDoMeApi/Request/GetAll
+21.06.2020 07:36:32	SuccessAudit	OfferController: called ReDoMeApi/Offer/GetStatusesByBarber
+21.06.2020 07:36:33	SuccessAudit	OfferController: ended ReDoMeApi/Offer/GetStatusesByBarber
+21.06.2020 07:38:59	SuccessAudit	RequestController: called ReDoMeApi/Request/GetOffers
+21.06.2020 07:38:59	SuccessAudit	RequestController: ended ReDoMeApi/Request/GetOffers
+21.06.2020 07:41:43	SuccessAudit	RequestController: called ReDoMeApi/Request/GetPhotos
+21.06.2020 07:41:44	SuccessAudit	RequestController: ended ReDoMeApi/Request/GetPhotos
+21.06.2020 07:44:52	SuccessAudit	OfferController: called ReDoMeApi/Offer/GetPhotos
+21.06.2020 07:44:52	Error	OfferController: Error Offer/GetPhotos: Missing parameter offer_id
+21.06.2020 07:44:53	SuccessAudit	OfferController: ended ReDoMeApi/Offer/GetPhotos
+21.06.2020 07:45:01	SuccessAudit	OfferController: called ReDoMeApi/Offer/GetPhotos
+21.06.2020 07:45:01	SuccessAudit	OfferController: ended ReDoMeApi/Offer/GetPhotos

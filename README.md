@@ -32,3 +32,15 @@ Go to created folder and run:
 
 [deps]: https://img.shields.io/david/vkcom/create-vk-mini-app.svg
 [deps-url]: https://david-dm.org/vkcom/create-vk-mini-app"# ReDoMe"
+
+# Развертывание Backend
+1. Скопировать содержимое папки backend\Source\ReDoMeAPI\ReDoMeAPI\bin\Debug на машину под управлением ОС Windows
+2. При необходимости создать базу с помощью скрипта backend\Database\crebas.sql O(СУБД MS SQL Server Express 2008 r2 и позднее)
+3. В файле ReDoMeAPI.exe.config указать параметры:
+  - WebServicePort - номер tcp порта
+  - Mode - https
+  - ConnectionString  -строк подклбючения к SQL Server
+4. Установить сертификат на машину
+5. Выполнить netsh http add urlacl url=https://+:НОМЕР_ПОРТА/ user=YOUR_USERNAME 
+6. Выполнить netsh http add sslcert ipport=0.0.0.0:НОМЕР_ПОРТА certhash=YOUR_THUMBPRINT_WITHOUT_SPACES appid={06aabebd-3a91-4b80-8a15-adfd3c8a0b14} 
+7. Запустить ReDoMeAPI.exe
