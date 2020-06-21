@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "./static/css/main.2ad21703.chunk.css",
-    "main.js": "./static/js/main.9961f3ce.chunk.js",
-    "main.js.map": "./static/js/main.9961f3ce.chunk.js.map",
+    "main.js": "./static/js/main.e6dc92df.chunk.js",
+    "main.js.map": "./static/js/main.e6dc92df.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.5210f3c0.js",
     "runtime-main.js.map": "./static/js/runtime-main.5210f3c0.js.map",
     "static/css/2.6bab1db4.chunk.css": "./static/css/2.6bab1db4.chunk.css",
-    "static/js/2.f872bdf5.chunk.js": "./static/js/2.f872bdf5.chunk.js",
-    "static/js/2.f872bdf5.chunk.js.map": "./static/js/2.f872bdf5.chunk.js.map",
+    "static/js/2.1d567dd8.chunk.js": "./static/js/2.1d567dd8.chunk.js",
+    "static/js/2.1d567dd8.chunk.js.map": "./static/js/2.1d567dd8.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.d1f91f83f8604ab0dbb33a4c701ed002.js": "./precache-manifest.d1f91f83f8604ab0dbb33a4c701ed002.js",
+    "precache-manifest.5d40de6fa5433a73e6122af9786c7557.js": "./precache-manifest.5d40de6fa5433a73e6122af9786c7557.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.6bab1db4.chunk.css.map": "./static/css/2.6bab1db4.chunk.css.map",
     "static/css/main.2ad21703.chunk.css.map": "./static/css/main.2ad21703.chunk.css.map",
-    "static/js/2.f872bdf5.chunk.js.LICENSE.txt": "./static/js/2.f872bdf5.chunk.js.LICENSE.txt",
+    "static/js/2.1d567dd8.chunk.js.LICENSE.txt": "./static/js/2.1d567dd8.chunk.js.LICENSE.txt",
     "static/media/girl.png": "./static/media/girl.75cd926d.png",
     "static/media/logo.png": "./static/media/logo.17e33794.png",
     "static/media/persik.png": "./static/media/persik.4e1ec840.png"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.5210f3c0.js",
     "static/css/2.6bab1db4.chunk.css",
-    "static/js/2.f872bdf5.chunk.js",
+    "static/js/2.1d567dd8.chunk.js",
     "static/css/main.2ad21703.chunk.css",
-    "static/js/main.9961f3ce.chunk.js"
+    "static/js/main.e6dc92df.chunk.js"
   ]
 }
