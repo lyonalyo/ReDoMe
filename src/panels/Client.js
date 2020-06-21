@@ -14,7 +14,7 @@ import {IOS, platform} from "@vkontakte/vkui";
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 
-import logo from "../img/logosmall.png";
+import logo from "../img/logo.png";
 import './logoheader.css';
 
 const osName = platform();
@@ -41,8 +41,8 @@ const Client = ({ id, go, fetchedUser }) => (
 			</Div>
 			<Separator style={{ margin: '12px 0' }} />
 			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="offers">
-					Посмотреть предложения
+				<Button size="xl" level="2" onClick={go} data-to="showAllzayavki">
+					Посмотреть запросы
 				</Button>
 			</Div>
 		</Group>

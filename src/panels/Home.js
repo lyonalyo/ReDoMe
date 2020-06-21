@@ -9,7 +9,9 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import './mainpage.css';
+import './Girl.css';
 import logo from "../img/logo.png";
+import girl from "../img/girl.png";
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
@@ -17,7 +19,7 @@ const Home = ({ id, go, fetchedUser }) => (
 
 		<Group title="Navigation Example">
 			<Div>
-				<img className="Logo" src={logo} alt="Persik The Cat"/>
+				<img className="Logo" src={logo}/>
 			</Div>
 			<Div>
 				<Button size="xl" level="2" onClick={go} data-to="client">
@@ -29,6 +31,9 @@ const Home = ({ id, go, fetchedUser }) => (
 					Я - мастер
 				</Button>
 			</Div>
+			<Div>
+				<img className="Logo" src={girl}/>
+			</Div>
 		</Group>
 	</Panel>
 );
@@ -37,6 +42,7 @@ Home.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
+		screen_name: PropTypes.string,
 		photo_200: PropTypes.string,
 		first_name: PropTypes.string,
 		last_name: PropTypes.string,

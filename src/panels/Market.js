@@ -11,7 +11,7 @@ import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Icon28MessageOutline from '@vkontakte/icons/dist/28/message_outline';
 
-import logo from "../img/logosmall.png";
+import logo from "../img/logo.png";
 import './logoheader.css';
 import CardGrid from "@vkontakte/vkui/dist/es6/components/CardGrid/CardGrid";
 

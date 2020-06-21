@@ -14,8 +14,8 @@ import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton
 
 import logo from "../img/logo.png";
 import './logoheader.css';
-import bridge from "@vkontakte/vk-bridge";
-import MasterProfile from "./MasterProfile";
+//import bridge from "@vkontakte/vk-bridge";
+//import MasterProfile from "./MasterProfile";
 
 const osName = platform();
 
@@ -47,6 +47,7 @@ Master.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
+		screen_name: PropTypes.string,
 		photo_200: PropTypes.string,
 		first_name: PropTypes.string,
 		last_name: PropTypes.string,

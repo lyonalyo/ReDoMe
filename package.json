@@ -23,6 +23,7 @@
     "@vkontakte/vk-bridge": "^2.2.2",
     "@vkontakte/vk-miniapps-deploy": "0.0.17",
     "@vkontakte/vkui": "^3.11.0",
+    "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
     "chalk": "^2.4.2",
     "core-js": "^3.6.4",
@@ -33,7 +34,8 @@
     "ngrok": "^3.2.7",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-file-base64": "^1.0.3"
   },
   "browserslist": {
     "production": [
