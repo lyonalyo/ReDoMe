@@ -1,37 +1,32 @@
-[<img width="134" src="https://vk.com/images/apps/mini_apps/vk_mini_apps_logo.svg">](https://vk.com/services)
+# Развертывание Frontend
+Необходимо установить Node.js и какую-нибудь IDE (например, PhpStorm)
 
-# Create VK Mini App [![npm][npm]][npm-url] [![deps][deps]][deps-url]
+Открыть консоль Windows (сочетание клавиш Windows + R)
+в консоли при помощи команд командной строки перейти в папку с проектом
 
-## How to install
+В папку проекта при помощи git скачать репозиторий github.com/lyonalyo/ReDoMe
 
-### Create VK Mini App with gh-pages deploy
+git remote add origin git@github.com:name/app.git
+git push -u origin master
 
-`npx @vkontakte/create-vk-mini-app <app-directory-name>`
+В консоли выолнить команду npm run deploy
 
-### Create VK Mini App with Zeit deploy
+По ссылке https://vk.com/apps?act=manage создать vk mini apss с произвольным названием.
 
-Firstly, you have to create Zeit account and connect it with your GitHub profile — https://zeit.co/
+В навигационной области слева выбрать пункт "Настройки"
 
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --zeit`
+В настройках Vk mini apps для всех трех способов запуска vk mini apss указать URL, который ведет на GitHub Pages с проектом (можно посмотреть на GitHud в разделе "Настройки -> GitHub Pages"
 
-### Create VK Mini App with Surge deploy
+Установка сервиса
 
-Firstly, you have to create Surge account and Surge-domain — https://surge.sh/
+Дополнительно можно:
+Дополнить в файле package.json
+"start": "cross-env PORT=1088 HTTPS=true react-scripts start",
 
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --surge <surge-domain>`
+Выполнить в командной строке npm start 
 
-## How to start work with app
-
-Go to created folder and run:
-`yarn start` || `npm start` — this will start dev server with hot reload on `localhost:10888`.
-
-`yarn run build` || `npm run build` — this will build production bundle, with tree-shaking, uglify and all this modern fancy stuff
-
-[npm]: https://img.shields.io/npm/v/@vkontakte/create-vk-mini-app.svg
-[npm-url]: https://npmjs.com/package/@vkontakte/create-vk-mini-app
-
-[deps]: https://img.shields.io/david/vkcom/create-vk-mini-app.svg
-[deps-url]: https://david-dm.org/vkcom/create-vk-mini-app"# ReDoMe"
+В настройках приложения включить режим разработки и указать URL для разработки https://localhost:10888/
+Указать в настройках в адресе для разработки 
 
 # Развертывание Backend
 1. Скопировать содержимое папки backend\Source\ReDoMeAPI\ReDoMeAPI\bin\Debug на машину под управлением ОС Windows
@@ -44,3 +39,5 @@ Go to created folder and run:
 5. Выполнить netsh http add urlacl url=https://+:НОМЕР_ПОРТА/ user=YOUR_USERNAME 
 6. Выполнить netsh http add sslcert ipport=0.0.0.0:НОМЕР_ПОРТА certhash=YOUR_THUMBPRINT_WITHOUT_SPACES appid={06aabebd-3a91-4b80-8a15-adfd3c8a0b14} 
 7. Запустить ReDoMeAPI.exe
+
+@antonsyssoyev
